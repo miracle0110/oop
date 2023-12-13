@@ -1,4 +1,4 @@
-/*
+ /*
  Problem Statement: Write a C++ program to generate fractal patterns by using Koch curves.
  */
  
@@ -8,18 +8,7 @@
 #include <math.h>
 using namespace std;
 
-void seedfill(int x,int y,int col)
-{
-	int c=getpixel(x,y);
-	if(c!=col)
-	{
-		putpixel(x,y,col);
-		seedfill(x+1,y,col);
-		seedfill(x-1,y,col);
-		seedfill(x,y+1,col);
-		seedfill(x,y-1,col);
-	}
-}
+
 
 void koch(int x1,int y1,int x2,int y2,int it)
 {
@@ -57,7 +46,7 @@ int main()
 		koch(200,266,100,100,3);
 		koch(100,100,300,100,3);
 		koch(300,100,200,266,3);
-		//seedfill(150,150,WHITE);
+
 		getch();
 		closegraph();
 		return 0;
